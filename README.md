@@ -1,6 +1,6 @@
 # Bit Packing Compression
 
-Integer array compression achieving 2-8x compression with O(1) random access.
+
 
 **Author:** Youness RADI (22311111)  
 **Project:** Software Engineering 2025
@@ -10,13 +10,30 @@ Integer array compression achieving 2-8x compression with O(1) random access.
 Compresses integer arrays by using minimum required bits per value instead of full 32-bit representation. Maintains direct element access without full decompression.
 
 ## Build & Run
+### Windows Command Prompt:
+```cmd
+# Create output directory
+mkdir bin
+
+# Compile
+javac -d bin src/com/bitpacking/*.java src/com/bitpacking/*/*.java
+
+# Run
+java -cp bin com.bitpacking.Main
+```
+
+### Unix/Linux/Mac:
 ```bash
+# Create output directory
+mkdir -p bin
+
 # Compile
 javac -d bin src/com/bitpacking/**/*.java
 
 # Run
 java -cp bin com.bitpacking.Main
 ```
+
 
 ## Usage
 ```java
@@ -113,3 +130,4 @@ See `report.pdf` for implementation details, algorithm analysis, and benchmarkin
 This compression technique is used in:
 - Apache Parquet (columnar storage)
 - Protocol Buffers (data serialization)
+
